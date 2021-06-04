@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>SNOMED CT Type Ahead || Allergies &amp; Adverse Reactions Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Custom Styles-->
+        <link rel="stylesheet" href="styles/custom.css">
+
+    </head>
+    <body>
+        <!--[if IE]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        
+        <!-- Site Content -->
+        <span id="toggle" style="display: none;"></span>
+        <span id="help"></span>
+        <div class="row">
+            <div class="column">
+                <div class="inner-wrap">
+                    <span id="helper"></span>
+                    <!-- Simple Search -->
+                    <h2>Allergies &amp; Adverse Reactions Demo <i><span style="background-color:honeydew">SNOMED CT</span></i> Demo</h2>
+                    
+                    <label id="myTextLabel3" for="myText3" style="font-size: 1.6em">Substance</label>
+                    <!--<p style="font-family:'Lucida Console', monospace; color:grey">
+                        &lt;105590001 | <b>Substance</b> | OR 
+                        &lt;&lt;14423008 | <b>Adhesive bandage, device</b> | OR 
+                        &lt;80919006 | <b>Jewelry</b> | OR 
+                        &lt;&lt;56242006 | <b>Light, electromagnetic radiation</b> |  OR 
+                        &lt;&lt;285686007 | <b>Low temperature</b> |  OR 
+                        &lt;&lt;84756000 | <b>Adhesive tape, device</b> |  OR 
+                        &lt;373873005 | <b>Pharmaceutical / biologic product</b> |  OR 
+                        &lt;10358901000001101 | <b>Trade family</b> | 
+                    </p>-->
+                    <input id="myText3" placeholder="Please enter your search here" /> 
+                    <br>
+                </div>
+                <!-- Simple Search Results -->
+                <ul id="snomed-dropdown03" name="snomed03">
+                    <!-- JSON Content Here -->
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="inner-wrap2">
+                    <ul id="advancedItems">
+                        <!-- SYNONYMS -->
+                        <li id="synonymsField">
+                            <span id="synonymsLabel" style="font-size: 1.6em"><b>Synonyms</b></span>
+                            <br>
+                            <!-- Parent Search Results -->
+                            <ul id="synonym-snomed-dropdown" name="snomed6">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END SYNONYMS -->
+
+                        <!-- PARENTS -->
+                        <li id="advancedFieldOne">
+                            <span id="parentLabel" style="font-size: 1.6em"><b>Ancestors</b></span>
+                            <br>
+                            <!-- Parent Search Results -->
+                            <ul id="parents-snomed-dropdown" name="snomed2">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END PARENTS -->
+
+                        <!-- CHILDREN -->
+                        <li id="advancedFieldTwo">
+                            <span id="childLabel" style="font-size: 1.6em"><b>Descendants</b></span>
+                            <br>
+                            <!-- Child Search Results -->
+                            <ul id="child-snomed-dropdown" name="snomed3">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END CHILDREN -->
+
+                        <!-- EXCIPIENT -->
+                        <li id="advancedFieldThree">
+                            <span id="excipientLabel" style="font-size: 1.6em"><b>Has Excipient</b></span>
+                            <br>
+                            <!-- Child Search Results -->
+                            <ul id="excipient-snomed-dropdown" name="snomed4">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END EXCIPIENT -->
+
+                        <!-- INGREDIENTS -->
+                        <li id="advancedFieldThree">
+                            <span id="IngredientsLabel" style="font-size: 1.6em"><b>Ingredients</b></span>
+                            <br>
+                            <!-- Ingredients Search Results -->
+                            <ul id="ingredients-snomed-dropdown" name="snomed5">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END INGREDIENTS -->
+
+                        <!-- RELATED -->
+                        <li id="advancedFieldThree">
+                            <span id="relatedLabel" style="font-size: 1.6em"><b>Related Products</b></span>
+                            <br>
+                            <!-- Related Search Results -->
+                            <ul id="related-snomed-dropdown" name="snomed6">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END RELATED -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            SNOMED CT example <u>only</u> <b>not</b> UI.<br />Please contact <a href="mailto:snomed@wales.nhs.uk">Welsh Reference and Terminology Service</a> should you have any queries.
+        </footer>
+
+        
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    	<script src="scripts/jquery-ui.min.js"></script>
+
+        <!-- Custom Scripts -->
+        <script src="scripts/plugin.js"></script>
+
+    </body>
+</html>
