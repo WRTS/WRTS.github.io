@@ -61,7 +61,7 @@ $(function  () {
 
                 } else {
                     $('#snomed-dropdown03').empty();
-                    var api_sequence_two_part_one = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
+                    var api_sequence_two_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
                     var api_two_SCT = "<373873005"
                     var api_sequence_two_part_two ="&filter="
                     var api_sequence_two = api_sequence_two_part_one + api_two_SCT + api_sequence_two_part_two
@@ -100,7 +100,7 @@ $(function  () {
                                 $(this).relatedProductsFunction();
                             })
                         } else {
-                            var api_sequence_three_part_one = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
+                            var api_sequence_three_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
                             var api_three_SCT = "<10358901000001101"
                             var api_sequence_three_part_two = "&filter="
                             var api_sequence_three = api_sequence_three_part_one + api_three_SCT + api_sequence_three_part_two
@@ -171,7 +171,7 @@ $(function  () {
     $.fn.synonymsFunction = function(){
         $(".inner-wrap2").removeClass("hide");
         var api_synonym = 0; 
-        var api_synonym_part_one = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/";
+        var api_synonym_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/";
         var SCTtext = $('#help').text();
         var SCT = SCTtext.trim().split("                                   ").pop();
         var SCTsynonym = SCT.trim().split(" ").pop();
@@ -189,7 +189,7 @@ $(function  () {
     $.fn.parentFunction = function(){
         $(".inner-wrap2").removeClass("hide");
         var api_parent_designations = 0
-        var api_parent_part_one = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/>!"
+        var api_parent_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/>!"
         var SCTtext = $('#help').text();
         var SCT = SCTtext.trim().split("                                   ").pop();
         var api_parent_SCT = SCT.trim().split(" ").pop();
@@ -237,7 +237,7 @@ $(function  () {
     $.fn.childFunction = function(){
         $(".inner-wrap2").removeClass("hide");
         var api_child_designations = 0
-        var api_child_part_one = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<!"
+        var api_child_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<!"
         var SCTtext = $('#help').text();
         var SCT = SCTtext.trim().split("                                   ").pop();
         var api_child_SCT = SCT.trim().split(" ").pop();
@@ -285,7 +285,7 @@ $(function  () {
     $.fn.excipientFunction = function(){
         $(".inner-wrap2").removeClass("hide");
         var api_excipient = 0;
-        var api_excipient_part_one = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/("
+        var api_excipient_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/("
         var SCTtext = $('#help').text();
         var SCT = SCTtext.trim().split("                                   ").pop();
         var api_excipient_SCT_part_one = SCT.trim().split(" ").pop();
@@ -328,7 +328,7 @@ $(function  () {
     $.fn.ingredientsFunction = function(){
         $(".inner-wrap2").removeClass("hide");
         var api_ingredients = 0;
-        var api_ingredients_part_one = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
+        var api_ingredients_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
         var SCTtext = $('#help').text();
         var SCT = SCTtext.trim().split("                                   ").pop();
         var api_ingredients_SCTID = SCT.trim().split(" ").pop();
@@ -372,7 +372,7 @@ $(function  () {
     $.fn.relatedProductsFunction = function(){
         $(".inner-wrap2").removeClass("hide");
         var api_related = 0;
-        var api_related_part_one = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<373873005:*="
+        var api_related_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<373873005:*="
         var SCTtext = $('#help').text();
         var SCT = SCTtext.trim().split("                                   ").pop();
         var api_related_SCT_part_one = SCT.trim().split(" ").pop();
