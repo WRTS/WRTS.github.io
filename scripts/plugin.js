@@ -22,7 +22,7 @@ $(function  () {
             $('#snomed-dropdown03').empty();
             var api_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
             //var api_one_SCT = "<105590001 OR <<14423008 OR <80919006 OR <<56242006 OR <<285686007 OR <<84756000"
-            var api_one_SCT = "373873005"
+            var api_one_SCT = "<373873005"
             var api_part_two = "&filter="
             var api = api_part_one + api_one_SCT + api_part_two
             $.getJSON(api + request.term, function (data){
