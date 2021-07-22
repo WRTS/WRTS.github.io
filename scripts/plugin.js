@@ -21,7 +21,8 @@ $(function  () {
         var getData = function (request, response) {
             $('#snomed-dropdown03').empty();
             var api_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
-            var api_one_SCT = "<105590001 OR <<14423008 OR <80919006 OR <<56242006 OR <<285686007 OR <<84756000"
+            //var api_one_SCT = "<105590001 OR <<14423008 OR <80919006 OR <<56242006 OR <<285686007 OR <<84756000"
+            var api_one_SCT = "373873005"
             var api_part_two = "&filter="
             var api = api_part_one + api_one_SCT + api_part_two
             $.getJSON(api + request.term, function (data){
@@ -62,7 +63,8 @@ $(function  () {
                 } else {
                     $('#snomed-dropdown03').empty();
                     var api_sequence_two_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
-                    var api_two_SCT = "<373873005"
+                    //var api_two_SCT = "<373873005"
+                    var api_two_SCT = "<10358901000001101"
                     var api_sequence_two_part_two ="&filter="
                     var api_sequence_two = api_sequence_two_part_one + api_two_SCT + api_sequence_two_part_two
                     $.getJSON(api_sequence_two + request.term, function (data){
@@ -101,7 +103,8 @@ $(function  () {
                             })
                         } else {
                             var api_sequence_three_part_one = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/"
-                            var api_three_SCT = "<10358901000001101"
+                            //var api_three_SCT = "<10358901000001101"
+                            var api_three_SCT = "<105590001 OR <<14423008 OR <80919006 OR <<56242006 OR <<285686007 OR <<84756000"
                             var api_sequence_three_part_two = "&filter="
                             var api_sequence_three = api_sequence_three_part_one + api_three_SCT + api_sequence_three_part_two
                             $.getJSON(api_sequence_three + request.term, function (data){
