@@ -1,145 +1,227 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <title>SNOMED CT Type Ahead || Allergies &amp; Adverse Reactions Demo</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<title>Care Plans || SNOMED CT Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="first">
+            the Martian, Marvin (Mr.)<br>
+        </div>
+        <div>
+            NHS Number:<br>
+            Ward:<br>
+            Clincian:<br>
+        </div>
+        <div>
+            00000000001<br>
+            -<br>
+            -<br>
+        </div>
+        <div>
+            Date of Birth:<br>
+            Gender:<br>
+            Address:<br>
+        </div>
+        <div>
+            24-Jul-1948 (73y)<br>
+            Male<br>
+            123 Streetname<br>
+            Mars {planet}<br>
+            NE57 1EE
+        </div>
+    </header>
 
-        <!-- Bootstrap Styles -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Custom Styles-->
-        <link rel="stylesheet" href="styles/custom.css">
+    <div class="menu">
+        <div class="group set1">
+            <input type="radio" name="rb" id="rb1" />
+            <label for="rb1">Patient Details</label>
+                <span class="rb1_content hidden"><i>Coming soon...</i></span>
+            <input type="radio" name="rb" id="rb2" />
+            <label for="rb2">Patient Warings</label>
+                <span class="rb2_content hidden"><i>Coming soon...</i></span>
+            <input type="radio" name="rb" id="rb3" class="plans" />
+            <label for="rb3">Care Plan</label>
 
-    </head>
-    <body>
-        <!--[if IE]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-        
-        <!-- Site Content -->
-        <span id="toggle" style="display: none;"></span>
-        <span id="help"></span>
-        <div class="row">
-            <div class="column">
-                <div class="inner-wrap">
-                    <span id="helper"></span>
-                    <!-- Simple Search -->
-                    <h2>Allergies &amp; Adverse Reactions Demo <i><span style="background-color:honeydew">SNOMED CT</span></i> Demo</h2>
-                    
-                    <label id="myTextLabel3" for="myText3" style="font-size: 1.6em">Substance</label>
-                    <!--<p style="font-family:'Lucida Console', monospace; color:grey">
-                        &lt;105590001 | <b>Substance</b> | OR 
-                        &lt;&lt;14423008 | <b>Adhesive bandage, device</b> | OR 
-                        &lt;80919006 | <b>Jewelry</b> | OR 
-                        &lt;&lt;56242006 | <b>Light, electromagnetic radiation</b> |  OR 
-                        &lt;&lt;285686007 | <b>Low temperature</b> |  OR 
-                        &lt;&lt;84756000 | <b>Adhesive tape, device</b> |  OR 
-                        &lt;373873005 | <b>Pharmaceutical / biologic product</b> |  OR 
-                        &lt;10358901000001101 | <b>Trade family</b> | 
-                    </p>-->
-                    <input id="myText3" placeholder="Please enter your search here" /> 
-                    <br>
-                </div>
-                <!-- Simple Search Results -->
-                <ul id="snomed-dropdown03" name="snomed03">
-                    <!-- JSON Content Here -->
-                </ul>
-            </div>
+                <input class="part_one hide add" type="radio" name="rb01" id="rb5" />
+                <label class="part_one hide" for="rb5">Add Care Plan</label>
 
-            <div class="column">
-                <div class="inner-wrap2">
-                    <ul id="advancedItems">
-                        <!-- SYNONYMS -->
-                        <li id="synonymsField">
-                            <span id="synonymsLabel" style="font-size: 1.6em"><b>Synonyms</b></span>
-                            <br>
-                            <!-- Parent Search Results -->
-                            <ul id="synonym-snomed-dropdown" name="snomed6">
-                                <!-- JSON return here -->
-                            </ul>
-                            <br><br>
-                        </li>
-                        <!-- END SYNONYMS -->
+                    <input class="part_two hide2" type="radio" name="rb02" id="rb8" />
+                    <label class="part_two hide2 new_add" for="rb8">New Nursing Care Plan</label>
+                    <input class="part_two hide2" type="radio" name="rb02" id="rb9" />
+                    <label class="part_two hide2" for="rb9">Post Procedure Care</label>
+                        <span class="rb9_content hidden"><i>Coming soon...</i></span>
 
-                        <!-- PARENTS -->
-                        <li id="advancedFieldOne">
-                            <span id="parentLabel" style="font-size: 1.6em"><b>Ancestors</b></span>
-                            <br>
-                            <!-- Parent Search Results -->
-                            <ul id="parents-snomed-dropdown" name="snomed2">
-                                <!-- JSON return here -->
-                            </ul>
-                            <br><br>
-                        </li>
-                        <!-- END PARENTS -->
+                <input class="part_one hide"type="radio" name="rb01" id="rb6" />
+                <label class="part_one hide"for="rb6">Active Care Plans</label>
+                    <span class="rb6_content hidden"><i>Coming soon...</i></span>
+                <input class="part_one hide"type="radio" name="rb01" id="rb7" class="SoB" />
+                <label class="part_one hide"for="rb7">Closed Care Plans</label>
+                    <span class="rb7_content hidden"><i>Coming soon...</i></span>
 
-                        <!-- CHILDREN -->
-                        <li id="advancedFieldTwo">
-                            <span id="childLabel" style="font-size: 1.6em"><b>Descendants</b></span>
-                            <br>
-                            <!-- Child Search Results -->
-                            <ul id="child-snomed-dropdown" name="snomed3">
-                                <!-- JSON return here -->
-                            </ul>
-                            <br><br>
-                        </li>
-                        <!-- END CHILDREN -->
+            <input type="radio" name="rb" id="rb22" />
+            <label for="rb22">Allergies &amp; Adverse Reactions</label>
+                <span class="rb22_content hidden"><i>Coming soon...</i></span>
 
-                        <!-- EXCIPIENT -->
-                        <li id="advancedFieldThree">
-                            <span id="excipientLabel" style="font-size: 1.6em"><b>Has Excipient</b></span>
-                            <br>
-                            <!-- Child Search Results -->
-                            <ul id="excipient-snomed-dropdown" name="snomed4">
-                                <!-- JSON return here -->
-                            </ul>
-                            <br><br>
-                        </li>
-                        <!-- END EXCIPIENT -->
-
-                        <!-- INGREDIENTS -->
-                        <li id="advancedFieldThree">
-                            <span id="IngredientsLabel" style="font-size: 1.6em"><b>Ingredients</b></span>
-                            <br>
-                            <!-- Ingredients Search Results -->
-                            <ul id="ingredients-snomed-dropdown" name="snomed5">
-                                <!-- JSON return here -->
-                            </ul>
-                            <br><br>
-                        </li>
-                        <!-- END INGREDIENTS -->
-
-                        <!-- RELATED -->
-                        <li id="advancedFieldThree">
-                            <span id="relatedLabel" style="font-size: 1.6em"><b>Related Products</b></span>
-                            <br>
-                            <!-- Related Search Results -->
-                            <ul id="related-snomed-dropdown" name="snomed6">
-                                <!-- JSON return here -->
-                            </ul>
-                            <br><br>
-                        </li>
-                        <!-- END RELATED -->
-                        
-                    </ul>
-                </div>
-            </div>
         </div>
 
-        <footer>
-            SNOMED CT example <u>only</u> <b>not</b> UI.<br />Please contact <a href="mailto:snomed@wales.nhs.uk">Welsh Reference and Terminology Service</a> should you have any queries.
-        </footer>
+    </div>
 
-        
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-    	<script src="scripts/jquery-ui.min.js"></script>
+    <!--<div class="Menu">
+        <ul class="Menu-list" data-offset="10">
+            <li class="Menu-list-item" data-offset="20" onclick>
+                Patient Details
+                <span class="Mask"><span>Patient Details</span></span>
+                <span class="Mask"><span>Patient Details</span></span>
+            </li>
+            <li class="Menu-list-item" data-offset="16" onclick>
+                Patient Warings
+                <span class="Mask"><span>Patient Warings</span></span>
+                <span class="Mask"><span>Patient Warings</span></span>
+            </li>
+            <li class="Menu-list-item Care-Plan" data-offset="12" onclick>
+                Care Plan
+                <span class="Mask"><span>Care Plan</span></span>
+                <span class="Mask"><span>Care Plan</span></span>
+            </li>
+            <div class="Menu2" onclick>
+                <ul class="Menu-list" data-offset="10">
+                    <li class="Menu-list-item add" data-offset="20" onclick>
+                        Add Care Plan
+                        <span class="Mask"><span>Add Care Plan</span></span>
+                        <span class="Mask"><span>Add Care Plan</span></span>
+                    </li>
+                    <div class="Menu3" onclick>
+                        <ul class="Menu-list" data-offset="10">
+                            <li class="Menu-list-item new" data-offset="20" onclick>
+                                New Nursing Care Plan
+                                <span class="Mask"><span>New Nursing Care Plan</span></span>
+                                <span class="Mask"><span>New Nursing Care Plan</span></span>
+                            </li>
+                            <div class="Menu4" onclick>
+                                <ul class="Menu-list" data-offset="10">
+                                    <li class="Menu-list-item" data-offset="20" onclick>
+                                        Communication
+                                        <span class="Mask"><span>Communication</span></span>
+                                        <span class="Mask"><span>Communication</span></span>
+                                    </li>
+                                    <li class="Menu-list-item Breathing" data-offset="16" onclick>
+                                        Breathing
+                                        <span class="Mask"><span>Breathing</span></span>
+                                        <span class="Mask"><span>Breathing</span></span>
+                                    </li>
+                                    <li class="Menu-list-item" data-offset="12" onclick>
+                                        Nutrition &amp; Hydration
+                                        <span class="Mask"><span>Nutrition &amp; Hydration</span></span>
+                                        <span class="Mask"><span>Nutrition &amp; Hydration</span></span>
+                                    </li>
+                                    <li class="Menu-list-item" data-offset="8" onclick>
+                                        Other
+                                        <span class="Mask"><span>Other</span></span>
+                                        <span class="Mask"><span>Other</span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <li class="Menu-list-item" data-offset="16" onclick>
+                                Post Procedure Care
+                                <span class="Mask"><span>Post Procedure Care</span></span>
+                                <span class="Mask"><span>Post Procedure Care</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="Menu-list-item" data-offset="16" onclick>
+                        Active Care Plans
+                        <span class="Mask"><span>Active Care Plans</span></span>
+                        <span class="Mask"><span>Active Care Plans</span></span>
+                    </li>
+                    <li class="Menu-list-item" data-offset="12" onclick>
+                        Closed Care Plans
+                        <span class="Mask"><span>Closed Care Plans</span></span>
+                        <span class="Mask"><span>Closed Care Plans</span></span>
+                    </li>
+                </ul>
+            </div>
+            <li class="Menu-list-item" data-offset="8" onclick>
+                Allergies
+                <span class="Mask"><span>Allergies</span></span>
+                <span class="Mask"><span>Allergies</span></span>
+            </li>
+        </ul>
+    </div>-->
 
-        <!-- Custom Scripts -->
-        <script src="scripts/plugin.js"></script>
+    <div class="content">
+        <div class="part_three hide3">
+            
+            <h2>Nursing Problem</h2>
+            <input type="radio" name="rb03" id="rb10" />
+            <label for="rb10">Sleep Apnoea</label>
+            <input type="radio" name="rb03" id="rb11" />
+            <label for="rb11">Aspiration</label>
+            <input type="radio" name="rb03" id="rb12" class="SoB" />
+            <label for="rb12">Shortness of breath</label>
+            <input type="radio" name="rb03" id="rb13" />
+            <label for="rb13">Inefficient airway clearance</label>
+            <input type="radio" name="rb03" id="rb14" class="AcuteMetabolicDisorder" />
+            <label for="rb14">Acute Metabolic disorder</label>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="part_four hide4">
+            <h2>Secondary To</h2>
+            <input type="radio" name="rb04" id="rb15" />
+            <label for="rb15">Exacerbation of Asthma</label>
+            <input type="radio" name="rb04" id="rb16" />
+            <label for="rb16">Exacerbation of type 2 respiratory disease</label>
+            <input type="radio" name="rb04" id="rb17" />
+            <label for="rb17">Respiratory infection or virus</label>
+            <input type="radio" name="rb04" id="rb18" />
+            <label for="rb18">Pneumothorax</label>
+            <input type="radio" name="rb04" id="rb19" />
+            <label for="rb19">Pleural effusion</label>
+            <input type="radio" name="rb04" id="rb20" />
+            <label for="rb20">Anaemia</label>
+            <input type="radio" class="other" name="rb04" id="rb21" />
+            <label for="rb21">Other</label>
+            
+            <!-- Simple Search -->
+            <span id="search" class="hide5">
+                <!-- Simple Search -->
+                <!--<label id="myTextLabel3" for="myText3" style="font-size: 1.6em">Other</label><br>-->
+                <input id="myText3" class="textInput" placeholder="Please enter your search here" />
+                <br>
+            </div>
+            <!-- Simple Search Results -->
+            <ul id="snomed-dropdown03" name="snomed03">
+                <!-- JSON Content Here -->
+            </ul>
+            </span>
+        </div>
 
-    </body>
+        <div id="second">
+            Your selection: <span id="option_4"> </span><span id="option_5"> </span><span id="option_6"> </span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <span>SNOMED CT Demo</span>
+        <span id="border"></span>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <!--<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>-->
+    <script src="script/jquery-1.11.1.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="script/app2.js"></script>
+    <script src="script/search.js"></script>
+
+</body>
 </html>
