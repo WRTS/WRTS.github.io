@@ -15,7 +15,8 @@ $(function () {
 
     //OTHER | SEARCH
     var getData = function (request, response){
-        var api = "https://termservtestmaster.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<404684003&count=5&filter="
+        //var api = "https://termservtestmaster.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<404684003&count=5&filter="
+        var api = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<404684003&count=5&filter="
         $.getJSON(api + request.term, function (data){
             dropdown03.html('<li>Results: <b>' + data.expansion.total + '</b></li>');
             $("#snomed-dropdown03 > li").first().focus();

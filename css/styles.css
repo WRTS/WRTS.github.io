@@ -84,8 +84,16 @@ header div{
   margin-left: 100px;
 }
 
+.part_five{
+  margin-left: 150px;
+}
+
 .rb9_content{
   margin-left: 150px;
+}
+
+.rb81_content, .rb83_content, .rb84_content{
+  margin-left: 200px;
 }
 
 input[type="radio"] {
@@ -170,9 +178,13 @@ footer #border{
 }
 
 /* SEACRH STYLES */
-.hide, .hidden, .hide2, .hide3, .hide4, .hide5{
+.hide, .hidden, .hide2, .hide3, .hide4, .hide5, .hide6{
   display: none;
 }
+
+/*.hide6{
+  background: pink;
+}*/
 
 #search{
   position: relative;
