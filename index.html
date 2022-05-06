@@ -35,106 +35,431 @@
         </div>
     </header>
 
-    <div class="menu">
-        <div class="group set1">
-            <input type="radio" name="rb" id="rb1" />
-            <label for="rb1">Patient Details</label>
-                <span class="rb1_content hidden"><i>Coming soon...</i></span>
-            <input type="radio" name="rb" id="rb2" />
-            <label for="rb2">Patient Warings</label>
-                <span class="rb2_content hidden"><i>Coming soon...</i></span>
-            <input type="radio" name="rb" id="rb3" class="plans" />
-            <label for="rb3">Care Plan</label>
+    <div class="grid-container">
+        <div class="item1">Care Domain</div>
+        <div class="item2">Nursing problem?</div>
+        <div class="item3">Nursing Problem</div>
+        <div class="item4">Secondary ?</div>
+        <div class="item5">Secondary To</div>
+        <div class="item6">Nursing Intervention?</div>
+        <div class="item7">Nursing Intervention</div>
+        <div class="item8">Frequency</div>
+        <div class="item9">Special Instructions</div>
+        <div class="item10">Evaluation</div>
 
-                <input class="part_one hide add" type="radio" name="rb01" id="rb5" />
-                <label class="part_one hide" for="rb5">Add Care Plan</label>
-
-                    <input class="part_two hide2" type="radio" name="rb02" id="rb8" />
-                    <label class="part_two hide2 new_add2" for="rb8">New Nursing Care Plan</label>
-                    
-                        <input class="part_five hide6" type="radio" name="rb021" id="rb81" />
-                        <label class="part_five hide6" for="rb81">Communication</label>
-                            <span class="rb81_content hidden"><i>Coming soon...</i></span>
-                        <input class="part_five hide6" type="radio" name="rb021" id="rb82" />
-                        <label class="part_five hide6 new_add" for="rb82">Breathing</label>
-                           
-                        <input class="part_five hide6" type="radio" name="rb021" id="rb83" />
-                        <label class="part_five hide6" for="rb83">Nutrition &amp; Hydration</label>
-                            <span class="rb83_content hidden"><i>Coming soon...</i></span>
-                        <input class="part_five hide6" type="radio" name="rb021" id="rb84" />
-                        <label class="part_five hide6" for="rb84">Other</label>
-                    
-                    <input class="part_two hide2" type="radio" name="rb02" id="rb9" />
-                    <label class="part_two hide2" for="rb9">Post Procedure Care</label>
-                        <span class="rb9_content hidden"><i>Coming soon...</i></span>
-
-                <input class="part_one hide"type="radio" name="rb01" id="rb6" />
-                <label class="part_one hide"for="rb6">Active Care Plans</label>
-                    <span class="rb6_content hidden"><i>Coming soon...</i></span>
-                <input class="part_one hide"type="radio" name="rb01" id="rb7" class="SoB" />
-                <label class="part_one hide"for="rb7">Closed Care Plans</label>
-                    <span class="rb7_content hidden"><i>Coming soon...</i></span>
-
-            <input type="radio" name="rb" id="rb22" />
-            <label for="rb22">Allergies &amp; Adverse Reactions</label>
-                <span class="rb22_content hidden"><i>Coming soon...</i></span>
-
+        <div class="item11">Communication</div>
+        <div class="item12">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox01" name="check"/>
+                    <label for="slideCheckbox01"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
         </div>
-
-    </div>
-    
-    <div class="content">
-        <div class="part_three hide3">
-            <h2>Nursing Problem</h2>
-            <input type="radio" name="rb03" id="rb10" />
-            <label for="rb10">Sleep Apnoea</label>
-            <input type="radio" name="rb03" id="rb11" />
-            <label for="rb11">Aspiration</label>
-            <input type="radio" name="rb03" id="rb12" class="SoB" />
-            <label for="rb12">Shortness of breath</label>
-            <input type="radio" name="rb03" id="rb13" />
-            <label for="rb13">Inefficient airway clearance</label>
-            <input type="radio" name="rb03" id="rb14" class="AcuteMetabolicDisorder" />
-            <label for="rb14">Acute Metabolic disorder</label>
-        </div>
-    </div>
-    
-    <div class="content">
-        <div class="part_four hide4">
-            <h2>Secondary To</h2>
-            <input type="radio" name="rb04" id="rb15" />
-            <label for="rb15">Exacerbation of Asthma</label>
-            <input type="radio" name="rb04" id="rb16" />
-            <label for="rb16">Exacerbation of type 2 respiratory disease</label>
-            <input type="radio" name="rb04" id="rb17" />
-            <label for="rb17">Respiratory infection or virus</label>
-            <input type="radio" name="rb04" id="rb18" />
-            <label for="rb18">Pneumothorax</label>
-            <input type="radio" name="rb04" id="rb19" />
-            <label for="rb19">Pleural effusion</label>
-            <input type="radio" name="rb04" id="rb20" />
-            <label for="rb20">Anaemia</label>
-            <input type="radio" class="other" name="rb04" id="rb21" />
-            <label for="rb21">Other</label>
-            
+        <div class="item13">
             <!-- Simple Search -->
-            <span id="search" class="hide5">
-                <!-- Simple Search -->
-                <!--<label id="myTextLabel3" for="myText3" style="font-size: 1.6em">Other</label><br>-->
-                <input id="myText3" class="textInput" placeholder="Please enter your search here" />
+            <section id="search">
+                <input id="myText1" class="textInput" placeholder="Text here" />
                 <br>
-            </div>
-            <!-- Simple Search Results -->
-            <ul id="snomed-dropdown03" name="snomed03">
-                <!-- JSON Content Here -->
-            </ul>
-            </span>
+                <ul id="snomed-dropdown01" name="snomed01">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item14">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox02" name="check" />
+                    <label for="slideCheckbox02"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item15">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText2" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown02" name="snomed02">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item16">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox03" name="check" />
+                    <label for="slideCheckbox03"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item17">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText3" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown03" name="snomed03">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item18">
+            <!-- Dropdown List -->
+                <section>
+                    <select>
+                        <option default>Frequency</option>
+                        <option>Hourly</option>
+                        <option>Every two hours</option>
+                        <option>Every two hours</option>
+                        <option>Every four hours</option>
+                        <option>Every six hours</option>
+                        <option>Every eight hours</option>
+                        <option>Every ten hours</option>
+                        <option>Every twelve hours</option>
+                        <option>Every eighteen hours</option>
+                        <option>Every twenty four hours</option>
+                      </select>
+                </section>
+            <!-- End Dropdown -->
+        </div>
+        <div class="item19">
+            <!-- Text Area -->
+                <section>
+                    <label>
+                        <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                      </label>
+                </section>
+            <!-- End Text Area-->
+        </div>
+        <div class="item20">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
         </div>
 
-        <div id="second">
-            Your selection: <span id="option_4"> </span><span id="option_5"> </span><span id="option_6"> </span>
+        <div class="item21">Breathing</div>
+        <div class="item22">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox04" name="check" />
+                    <label for="slideCheckbox04"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
         </div>
+        <div class="item23">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText4" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown04" name="snomed04">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item24">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox05" name="check" />
+                    <label for="slideCheckbox05"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item25">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText5" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown05" name="snomed05">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item26">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox06" name="check" />
+                    <label for="slideCheckbox06"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item27">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText6" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown06" name="snomed06">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item28">
+            <!-- Dropdown List -->
+            <section>
+                <select>
+                    <option default>Frequency</option>
+                    <option>Hourly</option>
+                    <option>Every two hours</option>
+                    <option>Every two hours</option>
+                    <option>Every four hours</option>
+                    <option>Every six hours</option>
+                    <option>Every eight hours</option>
+                    <option>Every ten hours</option>
+                    <option>Every twelve hours</option>
+                    <option>Every eighteen hours</option>
+                    <option>Every twenty four hours</option>
+                  </select>
+            </section>
+            <!-- End Dropdown -->
+        </div>
+        <div class="item29">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+        <div class="item30">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+
+        <div class="item31">Nutrition &amp; Hydration</div>
+        <div class="item32">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox07" name="check" />
+                    <label for="slideCheckbox07"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item33">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText7" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown07" name="snomed07">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item34">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox08" name="check" />
+                    <label for="slideCheckbox08"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item35">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText8" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown08" name="snomed08">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item36">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox09" name="check" />
+                    <label for="slideCheckbox09"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item37">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText9" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown09" name="snomed09">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item38">
+            <!-- Dropdown List -->
+            <section>
+                <select>
+                    <option default>Frequency</option>
+                    <option>Hourly</option>
+                    <option>Every two hours</option>
+                    <option>Every two hours</option>
+                    <option>Every four hours</option>
+                    <option>Every six hours</option>
+                    <option>Every eight hours</option>
+                    <option>Every ten hours</option>
+                    <option>Every twelve hours</option>
+                    <option>Every eighteen hours</option>
+                    <option>Every twenty four hours</option>
+                  </select>
+            </section>
+            <!-- End Dropdown -->
+        </div>
+        <div class="item39">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+        <div class="item40">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+
+        <div class="item41">Mobility</div>
+        <div class="item42">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox10" name="check" />
+                    <label for="slideCheckbox10"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item43">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText10" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown10" name="snomed10">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item44">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox11" name="check" />
+                    <label for="slideCheckbox11"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item45">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText11" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown11" name="snomed11">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item46">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox12" name="check" />
+                    <label for="slideCheckbox12"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item47">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText12" class="textInput" placeholder="Text here" />
+                <br>
+                <ul id="snomed-dropdown12" name="snomed12">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+           <!-- End Simple Search -->
+        </div>
+        <div class="item48">
+            <!-- Dropdown List -->
+            <section>
+                <select>
+                    <option default>Frequency</option>
+                    <option>Hourly</option>
+                    <option>Every two hours</option>
+                    <option>Every two hours</option>
+                    <option>Every four hours</option>
+                    <option>Every six hours</option>
+                    <option>Every eight hours</option>
+                    <option>Every ten hours</option>
+                    <option>Every twelve hours</option>
+                    <option>Every eighteen hours</option>
+                    <option>Every twenty four hours</option>
+                  </select>
+            </section>
+            <!-- End Dropdown -->
+        </div>
+        <div class="item49">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+        <div class="item50">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+
     </div>
+    
+        <!--<div id="second">
+            Your selection: <span id="option_4"> </span><span id="option_5"> </span><span id="option_6"> </span>
+        </div>-->
 
     <!-- Footer -->
     <footer>

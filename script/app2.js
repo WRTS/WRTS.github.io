@@ -1,436 +1,210 @@
-    // Patient Details
-    $("#rb1").click(function(){
-        if($(".rb1_content").hasClass("hidden")){
-            $(".rb1_content").removeClass("hidden")
-            // Patient Warnings
-            $(".rb2_content").addClass("hidden")
-            // Allergies
-            $(".rb22_content").addClass("hidden")
-            //Care Plan
-            $(".part_one").addClass("hide");
-            //Add Care Plan
-            $(".part_two").addClass("hide2");
-            //Active Care Plans
-            $(".rb6_content").addClass("hidden")
-            //Closed Care Plans
-            $(".rb7_content").addClass("hidden")
-            //New Nursing Care Plan
-            $(".part_five").addClass("hide6");
-            //Post Procedure Care
-            $(".rb9_content").addClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".rb1_content").addClass("hidden")
-        }
-    })
+$( document ).ready(function() {
+    $("#myText1").attr("disabled", true);
+    $("#myText2").attr("disabled", true);
+    $("#myText3").attr("disabled", true);
+    $("#myText3").attr("disabled", true);
+    $("#myText4").attr("disabled", true);
+    $("#myText5").attr("disabled", true);
+    $("#myText6").attr("disabled", true);
+    $("#myText7").attr("disabled", true);
+    $("#myText8").attr("disabled", true);
+    $("#myText9").attr("disabled", true);
+    $("#myText10").attr("disabled", true);
+    $("#myText11").attr("disabled", true);
+    $("#myText12").attr("disabled", true);
+});
 
-    // Patient Warnings
-    $("#rb2").click(function(){
-        if($(".rb2_content").hasClass("hidden")){
-            $(".rb2_content").removeClass("hidden")
-            // Patient Details
-            $(".rb1_content").addClass("hidden")
-            // Allergies
-            $(".rb22_content").addClass("hidden")
-            //Care Plan
-            $(".part_one").addClass("hide");
-            //Add Care Plan
-            $(".part_two").addClass("hide2");
-            //Active Care Plans
-            $(".rb6_content").addClass("hidden")
-            //Closed Care Plans
-            $(".rb7_content").addClass("hidden")
-            //New Nursing Care Plan
-            $(".part_five").addClass("hide6");
-            //Post Procedure Care
-            $(".rb9_content").addClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".rb2_content").addClass("hidden")
-        }
-    })
+$('#slideCheckbox01').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText1").attr("disabled", false);
+    }
+    else{ 
+        $("#myText1").attr("disabled", true);
+        $('#snomed-dropdown01').empty();
+        $('#myText1').val('');
+        $('#myText1').attr('placeholder', 'Text here');
+    }
+})
 
-    // Allergies
-    $("#rb22").click(function(){
-        if($(".rb22_content").hasClass("hidden")){
-            $(".rb22_content").removeClass("hidden")
-            // Patient Details
-            $(".rb1_content").addClass("hidden")
-            // Patient Warnings
-            $(".rb2_content").addClass("hidden")
-            //Care Plan
-            $(".part_one").addClass("hide");
-            //Add Care Plan
-            $(".part_two").addClass("hide2");
-            //Active Care Plans
-            $(".rb6_content").addClass("hidden")
-            //Closed Care Plans
-            $(".rb7_content").addClass("hidden")
-            //New Nursing Care Plan
-            $(".part_five").addClass("hide6");
-            //Post Procedure Care
-            $(".rb9_content").addClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".rb22_content").addClass("hidden")
+$('#slideCheckbox02').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText2").attr("disabled", false);
+    }
+    else{ 
+        $("#myText2").attr("disabled", true);
+        $('#snomed-dropdown02').empty();
+        $('#myText2').val('');
+        $('#myText2').attr('placeholder', 'Text here');
+    }
+})
 
-        }
-    })
-    
-    //Care Plan
-    $(".plans").click(function(){
-        if($(".part_one").hasClass("hide")){
-            $(".part_one").removeClass("hide");
-            // Patient Details
-            $(".rb1_content").addClass("hidden")
-            // Patient Warnings
-            $(".rb2_content").addClass("hidden")
-            // Allergies
-            $(".rb22_content").addClass("hidden")
-            //Add Care Plan
-            $(".part_two").addClass("hide2");
-            //Active Care Plans
-            $(".rb6_content").addClass("hidden")
-            //Closed Care Plans
-            $(".rb7_content").addClass("hidden")
-            //New Nursing Care Plan
-            $(".part_five").addClass("hide6");
-            //Post Procedure Care
-            $(".rb9_content").addClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".part_one").addClass("hide");
-            $(".part_two").addClass("hide2");
-            $(".part_three").addClass("hide3");
-            $(".part_four").addClass("hide4");
-            $("#search").addClass("hide5");
-            $("#search").css("display","none");
-            $('#snomed-dropdown03').empty();
-            $('.textInput').val('');
-        }
-    });
+$('#slideCheckbox03').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText3").attr("disabled", false);
+    }
+    else{ 
+        $("#myText3").attr("disabled", true);
+        $('#snomed-dropdown03').empty();
+        $('#myText3').val('');
+        $('#myText3').attr('placeholder', 'Text here');
+    }
+})
 
-    //Add Care Plan
-    $(".add").click(function(){
-        if($(".part_two").hasClass("hide2")){
-            $(".part_two").removeClass("hide2");
-            //Active Care Plans
-            $(".rb6_content").addClass("hidden")
-            //Closed Care Plans
-            $(".rb7_content").addClass("hidden")
-            //New Nursing Care Plan
-            $(".part_five").addClass("hide6");
-            //Post Procedure Care
-            $(".rb9_content").addClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".part_two").addClass("hide2");
-            $(".part_three").addClass("hide3");
-            $(".part_four").addClass("hide4");
-            $("#search").addClass("hide5");
-            $("#search").css("display","none");
-            $('#snomed-dropdown03').empty();
-            $('.textInput').val('');
-        }
-    });
+$('#slideCheckbox04').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText4").attr("disabled", false);
+    }
+    else{ 
+        $("#myText4").attr("disabled", true);
+        $('#snomed-dropdown04').empty();
+        $('#myText4').val('');
+        $('#myText4').attr('placeholder', 'Text here');
+    }
+})
 
-    //Active Care Plans
-    $("#rb6").click(function(){
-        $('#option_1').text("Active Care Plans")
-        if($(".rb6_content").hasClass("hidden")){
-            $(".rb6_content").removeClass("hidden")
-            //Add Care Plan
-            $(".part_two").addClass("hide2");
-            //Closed Care Plans
-            $(".rb7_content").addClass("hidden")
-            //New Nursing Care Plan
-            $(".part_five").addClass("hide6");
-            //Post Procedure Care
-            $(".rb9_content").addClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".rb6_content").addClass("hidden")
-        }
-    })
+$('#slideCheckbox05').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText5").attr("disabled", false);
+    }
+    else{ 
+        $("#myText5").attr("disabled", true);
+        $('#snomed-dropdown05').empty();
+        $('#myText5').val('');
+        $('#myText5').attr('placeholder', 'Text here');
+    }
+})
 
-    //Closed Care Plans
-    $("#rb7").click(function(){
-        $('#option_1').text("Closed Care Plans")
-        if($(".rb7_content").hasClass("hidden")){
-            $(".rb6_content").addClass("hidden")
-            //Add Care Plan
-            $(".part_two").addClass("hide2");
-            //Active Care Plans
-            $(".rb6_content").addClass("hidden")
-            //New Nursing Care Plan
-            $(".part_five").addClass("hide6");
-            //Post Procedure Care
-            $(".rb9_content").addClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".rb7_content").addClass("hidden")
-        }
-    })
+$('#slideCheckbox06').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText6").attr("disabled", false);
+    }
+    else{ 
+        $("#myText6").attr("disabled", true);
+        $('#snomed-dropdown06').empty();
+        $('#myText6').val('');
+        $('#myText6').attr('placeholder', 'Text here');
+    }
+})
 
-    //New Nursing Care Plan
-    $(".new_add2").click(function(){
-        if($(".part_five").hasClass("hide6")){
-            $(".part_five").removeClass("hide6");
-            //Post Procedure Care
-            $(".rb9_content").addClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".part_five").addClass("hide6");
-        }
-    });
+$('#slideCheckbox07').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText7").attr("disabled", false);
+    }
+    else{ 
+        $("#myText7").attr("disabled", true);
+        $('#snomed-dropdown07').empty();
+        $('#myText7').val('');
+        $('#myText7').attr('placeholder', 'Text here');
+    }
+})
 
-    //Post Procedure Care
-    $("#rb9").click(function(){
-        if($(".rb9_content").hasClass("hidden")){
-            $(".rb9_content").removeClass("hidden")
-            //New Nursing Care Plan
-            $(".part_five").addClass("hide6");
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".rb9_content").addClass("hidden")
-            
-        }
-    })
+$('#slideCheckbox08').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText8").attr("disabled", false);
+    }
+    else{ 
+        $("#myText8").attr("disabled", true);
+        $('#snomed-dropdown08').empty();
+        $('#myText8').val('');
+        $('#myText8').attr('placeholder', 'Text here');
+    }
+})
 
-    //Communication
-    $("#rb81").click(function(){
-        if($(".rb81_content").hasClass("hidden")){
-            $(".rb81_content").removeClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".rb81_content").addClass("hidden")
+$('#slideCheckbox09').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText9").attr("disabled", false);
+    }
+    else{ 
+        $("#myText9").attr("disabled", true);
+        $('#snomed-dropdown09').empty();
+        $('#myText9').val('');
+        $('#myText9').attr('placeholder', 'Text here');
+    }
+})
 
-        }
-    })
+$('#slideCheckbox10').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText10").attr("disabled", false);
+    }
+    else{ 
+        $("#myText10").attr("disabled", true);
+        $('#snomed-dropdown10').empty();
+        $('#myText10').val('');
+        $('#myText10').attr('placeholder', 'Text here');
+    }
+})
 
-    //Breathing
-    $(".new_add").click(function(){
-        if($(".part_three").hasClass("hide3")){
-            $(".part_three").removeClass("hide3");
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Nutrition
-            $(".rb83_content").addClass("hidden")
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".part_three").addClass("hide3");
-            $(".part_three").prop('checked', false);
-            $(".part_four").addClass("hide4");
-            $(".part_four").prop('checked', false);
-            $("#search").addClass("hide5");
-            $("#search").css("display","none");
-            $('#snomed-dropdown03').empty();
-            $('.textInput').val('');
-        }
-    });
+$('#slideCheckbox11').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText11").attr("disabled", false);
+    }
+    else{ 
+        $("#myText11").attr("disabled", true);
+        $('#snomed-dropdown11').empty();
+        $('#myText11').val('');
+        $('#myText11').attr('placeholder', 'Text here');
+    }
+})
 
-    //Nutrition
-    $("#rb83").click(function(){
-        if($(".rb83_content").hasClass("hidden")){
-            $(".rb83_content").removeClass("hidden")
-            //Communication
-            $(".rb81_content").addClass("hidden")
-            //Breathing
-            $(".part_three").addClass("hide3");
-            //Other
-            $('#option_4').text("");
-            $("#option_4").css("display","none");
-        } else {
-            $(".rb83_content").addClass("hidden")
-        }
-    })
+$('#slideCheckbox12').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText12").attr("disabled", false);
+    }
+    else{ 
+        $("#myText12").attr("disabled", true);
+        $('#snomed-dropdown12').empty();
+        $('#myText12').val('');
+        $('#myText12').attr('placeholder', 'Text here');
+    }
+})
 
-    //Other
-    $("#rb84").click(function(){
-        $('#option_4').text("XxXxXxXxX |Other|");
-        $("#option_4").css("display","unset");
-        //Communication
-        $(".rb81_content").addClass("hidden")
-        //Breathing
-        $(".part_three").addClass("hide3");
-        //Nutrition
-        $(".rb83_content").addClass("hidden")
-    })
+$('#slideCheckbox13').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText13").attr("disabled", false);
+    }
+    else{ 
+        $("#myText13").attr("disabled", true);
+        $('#snomed-dropdown13').empty();
+        $('#myText13').val('');
+        $('#myText13').attr('placeholder', 'Text here');
+    }
+})
 
-    //SoB
-    $(".SoB").click(function(){
-        if($(".part_four").hasClass("hide4")){
-            $(".part_four").removeClass("hide4");
-            $('#option_4').text("267036007 |Dyspnea (finding)|")
-            $("#option_4").css("display","unset");
-            $('.textInput').val("")
-        } else {
-            $("#option_4, #option_5, #option_6").text("");
-            $(".part_four").addClass("hide4");
-            $(".part_four").prop('checked', false);
-            $("#search").addClass("hide5");
-            $("#search").css("display","none");
-            $('#snomed-dropdown03').empty();
-            $('.textInput').val('');
-        }
-    });
+$('#slideCheckbox14').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText14").attr("disabled", false);
+    }
+    else{ 
+        $("#myText14").attr("disabled", true);
+        $('#snomed-dropdown14').empty();
+        $('#myText14').val('');
+        $('#myText14').attr('placeholder', 'Text here');
+    }
+})
 
-    //Other
-    $(".other").click(function(){
-        if($("#search").hasClass("hide5")){
-            $("#search").removeClass("hide5");
-            $("#search").css("display","unset");
-        } else {
-            $("#search").addClass("hide5");
-            $("#search").css("display","none");
-            $('#snomed-dropdown03').empty();
-            $('.textInput').val('');
-        }
-    });
-
-    //User Selection
-    $("#rb10").click(function(){
-        $(".part_four").addClass("hide4");
-        $('#option_4').text("73430006 |Sleep apnea|")
-        $("#option_4").css("display","unset");
-        $("#option_5").css("display","none");
-        $("#option_5").val("");
-        $(".part_four").prop('checked', false);
-    })
-
-    $("#rb11").click(function(){
-        $(".part_four").addClass("hide4");
-        $('#option_4').text("68052005 |Pulmonary aspiration|")
-        $("#option_4").css("display","unset");
-        $("#option_5").css("display","none");
-        $("#option_5").val("");
-        $(".part_four").prop('checked', false);
-    })
-
-    $("#rb13").click(function(){
-        $(".part_four").addClass("hide4");
-        $('#option_4').text("67750007 |Ineffective airway clearance|")
-        $("#option_4").css("display","unset");
-        $("#option_5").css("display","none");
-        $("#option_5").val("");
-        $(".part_four").prop('checked', false);
-    })
-
-    $("#rb14").click(function(){
-        $(".part_four").addClass("hide4");
-        $('#option_4').text("127339009 |Acute metabolic disorder|")
-        $("#option_4").css("display","unset");
-        $("#option_5").css("display","none");
-        $("#option_5").val("");
-        $(".part_four").prop('checked', false);
-    })
-
-    $("#rb15").click(function(){
-        $('#option_5').text("281239006 |Exacerbation of asthma|")
-        $("#option_5").css("display","unset");
-    })
-
-    $("#rb16").click(function(){
-        $('#option_5').text("50043002 |Disorder of respiratory system|")
-        $("#option_5").css("display","unset");
-    })
-
-    $("#rb17").click(function(){
-        $('#option_5').text("275498002 |Respiratory tract infection|")
-        $("#option_5").css("display","unset");
-    })
-
-    $("#rb18").click(function(){
-        $('#option_5').text("36118008 |Pneumothorax|")
-        $("#option_5").css("display","unset");
-    })
-
-    $("#rb19").click(function(){
-        $('#option_5').text("60046008 |Pleural effusion|")
-        $("#option_5").css("display","unset");
-    })
-
-    $("#rb20").click(function(){
-        $('#option_5').text("271737000 |Anemia|")
-        $("#option_5").css("display","unset");
-    })
+$('#slideCheckbox15').on('click', function(){
+    isChecked = $(this).is(':checked')
+    if(isChecked){ 
+        $("#myText15").attr("disabled", false);
+    }
+    else{ 
+        $("#myText15").attr("disabled", true);
+        $('#snomed-dropdown15').empty();
+        $('#myText15').val('');
+        $('#myText15').attr('placeholder', 'Text here');
+    }
+})
