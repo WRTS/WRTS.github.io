@@ -39,16 +39,15 @@
         <div class="item1">Care Domain</div>
         <div class="item2">Nursing problem?</div>
         <div class="item3">Nursing Problem</div>
-        <div class="item4">Secondary ?</div>
-        <div class="item5">Secondary To</div>
-        <div class="item6">Nursing Intervention?</div>
-        <div class="item7">Nursing Intervention</div>
-        <div class="item8">Frequency</div>
-        <div class="item9">Special Instructions</div>
-        <div class="item10">Evaluation</div>
+        <div class="item4">Secondary To</div>
+        <div class="item5">Nursing Intervention</div>
+        <!--<div class="item6">Frequency</div>-->
+        <div class="item6">Special Instructions</div>
+        <div class="item7">Changes?</div>
+        <div class="item8">Evaluation</div>
 
-        <div class="item11">Communication</div>
-        <div class="item12">
+        <div class="item9">Communication</div>
+        <div class="item10">
             <!-- Checkbox -->
             <section title=".slider">
                 <div class="slider">  
@@ -58,7 +57,7 @@
             </section>
             <!-- End Checkbox -->
         </div>
-        <div class="item13">
+        <div class="item11">
             <!-- Simple Search -->
             <section id="search">
                 <input id="myText1" class="textInput" placeholder="Text here" />
@@ -67,19 +66,10 @@
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedCommsNursing"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item14">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox02" name="check" />
-                    <label for="slideCheckbox02"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item15">
+        <div class="item12">
             <!-- Simple Search -->
             <section id="search">
                 <input id="myText2" class="textInput" placeholder="Text here" />
@@ -88,33 +78,25 @@
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedCommsSecond"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item16">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox03" name="check" />
-                    <label for="slideCheckbox03"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item17">
+        <div class="item13">
             <!-- Simple Search -->
             <section id="search">
-                <input id="myText3" class="textInput" placeholder="Text here" />
+                <input id="myText3" class="textInput" placeholder="Text here" /><span><button class="plus addComms"></button></span>
                 <br>
                 <ul id="snomed-dropdown03" name="snomed03">
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedCommsIntervention"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item18">
-            <!-- Dropdown List -->
+        <!--<div class="item15">
+            Dropdown List
                 <section>
-                    <select>
+                    <select id="frequencyOption01">
                         <option default>Frequency</option>
                         <option>Hourly</option>
                         <option>Every two hours</option>
@@ -127,30 +109,41 @@
                         <option>Every eighteen hours</option>
                         <option>Every twenty four hours</option>
                       </select>
-                </section>
-            <!-- End Dropdown -->
-        </div>
-        <div class="item19">
+                </section><br><br>
+                <span id="selectedCommsFrequency"></span>
+            End Dropdown
+        </div>-->
+        <div class="item14">
             <!-- Text Area -->
                 <section>
                     <label>
-                        <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                        <textarea id="text01" rows="5" cols="20" placeholder="Your message."></textarea>
                       </label>
                 </section>
             <!-- End Text Area-->
         </div>
-        <div class="item20">
+        <div class="item15">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox03" name="check" />
+                    <label for="slideCheckbox03"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item16">
             <!-- Text Area -->
             <section>
                 <label>
-                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                    <textarea id="CommsEvalText" rows="5" cols="20" placeholder="Your message."></textarea>
                   </label>
             </section>
             <!-- End Text Area-->
         </div>
 
-        <div class="item21">Breathing</div>
-        <div class="item22">
+        <div class="item17">Breathing</div>
+        <div class="item18">
             <!-- Checkbox -->
             <section title=".slider">
                 <div class="slider">  
@@ -160,7 +153,7 @@
             </section>
             <!-- End Checkbox -->
         </div>
-        <div class="item23">
+        <div class="item19">
             <!-- Simple Search -->
             <section id="search">
                 <input id="myText4" class="textInput" placeholder="Text here" />
@@ -169,19 +162,10 @@
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedBreathingNursing"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item24">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox05" name="check" />
-                    <label for="slideCheckbox05"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item25">
+        <div class="item20">
             <!-- Simple Search -->
             <section id="search">
                 <input id="myText5" class="textInput" placeholder="Text here" />
@@ -190,9 +174,51 @@
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedBreathingSecond"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item26">
+        <div class="item21">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText6" class="textInput" placeholder="Text here" /><span><button class="plus addBreathing"></button></span>
+                <br>
+                <ul id="snomed-dropdown06" name="snomed06">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+            <span id="selectedBreathingIntervention"></span>
+           <!-- End Simple Search -->
+        </div>
+        <!--<div class="item24">
+            Dropdown List
+            <section>
+                <select id="frequencyOption02">
+                    <option default>Frequency</option>
+                    <option>Hourly</option>
+                    <option>Every two hours</option>
+                    <option>Every two hours</option>
+                    <option>Every four hours</option>
+                    <option>Every six hours</option>
+                    <option>Every eight hours</option>
+                    <option>Every ten hours</option>
+                    <option>Every twelve hours</option>
+                    <option>Every eighteen hours</option>
+                    <option>Every twenty four hours</option>
+                  </select>
+            </section>
+            <span id="selectedBreathingFrequency"></span>
+            End Dropdown
+        </div>-->
+        <div class="item22">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea id="text02" rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+        <div class="item23">
             <!-- Checkbox -->
             <section title=".slider">
                 <div class="slider">  
@@ -202,57 +228,18 @@
             </section>
             <!-- End Checkbox -->
         </div>
-        <div class="item27">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText6" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown06" name="snomed06">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item28">
-            <!-- Dropdown List -->
-            <section>
-                <select>
-                    <option default>Frequency</option>
-                    <option>Hourly</option>
-                    <option>Every two hours</option>
-                    <option>Every two hours</option>
-                    <option>Every four hours</option>
-                    <option>Every six hours</option>
-                    <option>Every eight hours</option>
-                    <option>Every ten hours</option>
-                    <option>Every twelve hours</option>
-                    <option>Every eighteen hours</option>
-                    <option>Every twenty four hours</option>
-                  </select>
-            </section>
-            <!-- End Dropdown -->
-        </div>
-        <div class="item29">
+        <div class="item24">
             <!-- Text Area -->
             <section>
                 <label>
-                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-        <div class="item30">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                    <textarea id="BreathingEvalText" rows="5" cols="20" placeholder="Your message."></textarea>
                   </label>
             </section>
             <!-- End Text Area-->
         </div>
 
-        <div class="item31">Nutrition &amp; Hydration</div>
-        <div class="item32">
+        <div class="item25">Nutrition &amp; Hydration</div>
+        <div class="item26">
             <!-- Checkbox -->
             <section title=".slider">
                 <div class="slider">  
@@ -262,7 +249,7 @@
             </section>
             <!-- End Checkbox -->
         </div>
-        <div class="item33">
+        <div class="item27">
             <!-- Simple Search -->
             <section id="search">
                 <input id="myText7" class="textInput" placeholder="Text here" />
@@ -271,19 +258,10 @@
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedNutritionNursing"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item34">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox08" name="check" />
-                    <label for="slideCheckbox08"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item35">
+        <div class="item28">
             <!-- Simple Search -->
             <section id="search">
                 <input id="myText8" class="textInput" placeholder="Text here" />
@@ -292,9 +270,51 @@
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedNutritionSecond"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item36">
+        <div class="item29">
+            <!-- Simple Search -->
+            <section id="search">
+                <input id="myText9" class="textInput" placeholder="Text here" /><span><button class="plus addNutrition"></button></span>
+                <br>
+                <ul id="snomed-dropdown09" name="snomed09">
+                    <!-- Results JSON -->
+                </ul>
+            </section>
+            <span id="selectedNutritionIntervention"></span>
+           <!-- End Simple Search -->
+        </div>
+        <!--<div class="item33">
+            Dropdown List
+            <section>
+                <select id="frequencyOption03">
+                    <option default>Frequency</option>
+                    <option>Hourly</option>
+                    <option>Every two hours</option>
+                    <option>Every two hours</option>
+                    <option>Every four hours</option>
+                    <option>Every six hours</option>
+                    <option>Every eight hours</option>
+                    <option>Every ten hours</option>
+                    <option>Every twelve hours</option>
+                    <option>Every eighteen hours</option>
+                    <option>Every twenty four hours</option>
+                  </select>
+            </section>
+            <span id="selectedNutritionFrequency"></span>
+            End Dropdown
+        </div>-->
+        <div class="item30">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea id="text03" rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+        <div class="item31">
             <!-- Checkbox -->
             <section title=".slider">
                 <div class="slider">  
@@ -304,57 +324,18 @@
             </section>
             <!-- End Checkbox -->
         </div>
-        <div class="item37">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText9" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown09" name="snomed09">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item38">
-            <!-- Dropdown List -->
-            <section>
-                <select>
-                    <option default>Frequency</option>
-                    <option>Hourly</option>
-                    <option>Every two hours</option>
-                    <option>Every two hours</option>
-                    <option>Every four hours</option>
-                    <option>Every six hours</option>
-                    <option>Every eight hours</option>
-                    <option>Every ten hours</option>
-                    <option>Every twelve hours</option>
-                    <option>Every eighteen hours</option>
-                    <option>Every twenty four hours</option>
-                  </select>
-            </section>
-            <!-- End Dropdown -->
-        </div>
-        <div class="item39">
+        <div class="item32">
             <!-- Text Area -->
             <section>
                 <label>
-                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-        <div class="item40">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
+                    <textarea id="NutritionEvalText" rows="5" cols="20" placeholder="Your message."></textarea>
                   </label>
             </section>
             <!-- End Text Area-->
         </div>
 
-        <div class="item41">Mobility</div>
-        <div class="item42">
+        <div class="item33">Mobility</div>
+        <div class="item34">
             <!-- Checkbox -->
             <section title=".slider">
                 <div class="slider">  
@@ -364,7 +345,7 @@
             </section>
             <!-- End Checkbox -->
         </div>
-        <div class="item43">
+        <div class="item35">
             <!-- Simple Search -->
             <section id="search">
                 <input id="myText10" class="textInput" placeholder="Text here" />
@@ -373,19 +354,10 @@
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedMobilityNursing"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item44">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox11" name="check" />
-                    <label for="slideCheckbox11"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item45">
+        <div class="item36">
             <!-- Simple Search -->
             <section id="search">
                 <input id="myText11" class="textInput" placeholder="Text here" />
@@ -394,33 +366,25 @@
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedMobilitySecond"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item46">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox12" name="check" />
-                    <label for="slideCheckbox12"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item47">
+        <div class="item37">
             <!-- Simple Search -->
             <section id="search">
-                <input id="myText12" class="textInput" placeholder="Text here" />
+                <input id="myText12" class="textInput" placeholder="Text here" /><span><button class="plus addMobility"></button></span>
                 <br>
                 <ul id="snomed-dropdown12" name="snomed12">
                     <!-- Results JSON -->
                 </ul>
             </section>
+            <span id="selectedMobilityIntervention"></span>
            <!-- End Simple Search -->
         </div>
-        <div class="item48">
-            <!-- Dropdown List -->
+        <!--<div class="item42">
+            Dropdown List
             <section>
-                <select>
+                <select id="frequencyOption04">
                     <option default>Frequency</option>
                     <option>Hourly</option>
                     <option>Every two hours</option>
@@ -434,32 +398,38 @@
                     <option>Every twenty four hours</option>
                   </select>
             </section>
-            <!-- End Dropdown -->
-        </div>
-        <div class="item49">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-        <div class="item50">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-
-    </div>
-    
-        <!--<div id="second">
-            Your selection: <span id="option_4"> </span><span id="option_5"> </span><span id="option_6"> </span>
+            <span id="selectedNMobilityFrequency"></span>
+            End Dropdown
         </div>-->
+        <div class="item38">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea id="text04" rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+        <div class="item39">
+            <!-- Checkbox -->
+            <section title=".slider">
+                <div class="slider">  
+                    <input type="checkbox" value="None" id="slideCheckbox12" name="check" />
+                    <label for="slideCheckbox12"></label>
+                </div>
+            </section>
+            <!-- End Checkbox -->
+        </div>
+        <div class="item40">
+            <!-- Text Area -->
+            <section>
+                <label>
+                    <textarea id="MobilityEvalText" rows="5" cols="20" placeholder="Your message."></textarea>
+                  </label>
+            </section>
+            <!-- End Text Area-->
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>

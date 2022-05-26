@@ -141,6 +141,15 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText1').val(pft)
                 dropdown01.empty();
+                $('#selectedCommsNursing').html('<span class="chosen01">'+pft+'<span class="minus"></span></span>')
+                $("#myText1").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen01").remove();
+                    $("#myText1").attr('disabled', false);
+                    $("#myText1").val('');
+                    $('#myText1').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -171,6 +180,15 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText2').val(pft)
                 dropdown02.empty();
+                $('#selectedCommsSecond').html('<span class="chosen02">'+pft+'<span class="minus"></span></span>')
+                $("#myText2").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen02").remove();
+                    $("#myText2").attr('disabled', false);
+                    $("#myText2").val('');
+                    $('#myText2').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -201,6 +219,16 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText3').val(pft)
                 dropdown03.empty();
+                $(".addComms").attr("disabled", false);
+                $('#selectedCommsIntervention').append('<span class="chosen03">'+pft+'<select class="frequency01"><option default>Frequency</option><option>Hourly</option><option>Every two hours</option><option>Every two hours</option><option>Every four hours</option><option>Every six hours</option><option>Every eight hours</option><option>Every ten hours</option><option>Every twelve hours</option><option>Every eighteen hours</option><option>Every twenty four hours</option></select><span class="minus"></span><br></span>')
+                $("#myText3").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen03").remove();
+                    $("#myText3").attr('disabled', false);
+                    $("#myText3").val('');
+                    $('#myText3').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -231,6 +259,16 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText4').val(pft)
                 dropdown04.empty();
+
+                $('#selectedBreathingNursing').html('<span class="chosen04">'+pft+'<span class="minus"></span></span>')
+                $("#myText4").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen04").remove();
+                    $("#myText4").attr('disabled', false);
+                    $("#myText4").val('');
+                    $('#myText4').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -261,6 +299,15 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText5').val(pft)
                 dropdown05.empty();
+                $('#selectedBreathingSecond').html('<span class="chosen05">'+pft+'<span class="minus"></span></span>')
+                $("#myText5").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen05").remove();
+                    $("#myText5").attr('disabled', false);
+                    $("#myText5").val('');
+                    $('#myText5').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -291,6 +338,17 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText6').val(pft)
                 dropdown06.empty();
+
+                $(".addBreathing").attr("disabled", false);
+                $('#selectedBreathingIntervention').append('<span class="chosen06">'+pft+'<select class="frequency02"><option default>Frequency</option><option>Hourly</option><option>Every two hours</option><option>Every two hours</option><option>Every four hours</option><option>Every six hours</option><option>Every eight hours</option><option>Every ten hours</option><option>Every twelve hours</option><option>Every eighteen hours</option><option>Every twenty four hours</option></select><span class="minus"></span><br></span>')
+                $("#myText6").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen06").remove();
+                    $("#myText6").attr('disabled', false);
+                    $("#myText6").val('');
+                    $('#myText6').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -321,6 +379,16 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText7').val(pft)
                 dropdown07.empty();
+
+                $('#selectedNutritionNursing').html('<span class="chosen07">'+pft+'<span class="minus"></span></span>')
+                $("#myText7").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen07").remove();
+                    $("#myText7").attr('disabled', false);
+                    $("#myText7").val('');
+                    $('#myText7').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -351,6 +419,16 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText8').val(pft)
                 dropdown08.empty();
+
+                $('#selectedNutritionSecond').html('<span class="chosen08">'+pft+'<span class="minus"></span></span>')
+                $("#myText8").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen08").remove();
+                    $("#myText8").attr('disabled', false);
+                    $("#myText8").val('');
+                    $('#myText8').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -381,6 +459,17 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText9').val(pft)
                 dropdown09.empty();
+
+                $(".addNutrition").attr("disabled", false);
+                $('#selectedNutritionIntervention').append('<span class="chosen09">'+pft+'<select class="frequency03"><option default>Frequency</option><option>Hourly</option><option>Every two hours</option><option>Every two hours</option><option>Every four hours</option><option>Every six hours</option><option>Every eight hours</option><option>Every ten hours</option><option>Every twelve hours</option><option>Every eighteen hours</option><option>Every twenty four hours</option></select><span class="minus"></span><br></span>')
+                $("#myText9").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen09").remove();
+                    $("#myText9").attr('disabled', false);
+                    $("#myText9").val('');
+                    $('#myText9').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -411,6 +500,16 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText10').val(pft)
                 dropdown10.empty();
+
+                $('#selectedMobilityNursing').html('<span class="chosen10">'+pft+'<span class="minus"></span></span>')
+                $("#myText10").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen10").remove();
+                    $("#myText10").attr('disabled', false);
+                    $("#myText10").val('');
+                    $('#myText10').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -441,6 +540,16 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText11').val(pft)
                 dropdown11.empty();
+
+                $('#selectedMobilitySecond').html('<span class="chosen11">'+pft+'<span class="minus"></span></span>')
+                $("#myText11").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen11").remove();
+                    $("#myText11").attr('disabled', false);
+                    $("#myText11").val('');
+                    $('#myText11').attr('placeholder', 'Text here');
+                })
             });
         });
     }
@@ -471,6 +580,18 @@ $(function () {
                 var code = $(this).parent().val();
                 $('#myText12').val(pft)
                 dropdown12.empty();
+
+                $(".addMobility").attr("disabled", false);
+                $('#selectedMobilityIntervention').append('<span class="chosen12">'+pft+'<select class="frequency04"><option default>Frequency</option><option>Hourly</option><option>Every two hours</option><option>Every two hours</option><option>Every four hours</option><option>Every six hours</option><option>Every eight hours</option><option>Every ten hours</option><option>Every twelve hours</option><option>Every eighteen hours</option><option>Every twenty four hours</option></select><span class="minus"></span><br></span>')
+                $("#myText12").attr('disabled', true)
+
+                $(".minus").click(function(){
+                    $(this).closest(".chosen12").remove();
+                    $("#myText12").attr('disabled', false);
+                    $("#myText12").val('');
+                    $('#myText12').attr('placeholder', 'Text here');
+                })
+				
             });
         });
     }
