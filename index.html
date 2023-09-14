@@ -1,435 +1,336 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Care Plans || SNOMED CT Demo</title>
+	<title>TOMs || SNOMED CT Demo</title>
     <link rel="stylesheet" href="css/styles.css">
-            <!-- Font Awesome -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
-        <div id="first">
-            the Martian, Marvin (Mr.)<br>
+    <div class="wrap">
+        <div class="content">
+            &nbsp;
         </div>
-        <div>
-            NHS Number:<br>
-            Ward:<br>
-            Clincian:<br>
-        </div>
-        <div>
-            00000000001<br>
-            -<br>
-            -<br>
-        </div>
-        <div>
-            Date of Birth:<br>
-            Gender:<br>
-            Address:<br>
-        </div>
-        <div>
-            24-Jul-1948 (73y)<br>
-            Male<br>
-            123 Streetname<br>
-            Mars {planet}<br>
-            NE57 1EE
-        </div>
-    </header>
-
-    <div class="grid-container">
-        <div class="item1">Care Domain</div>
-        <div class="item2">Nursing problem?</div>
-        <div class="item3">Nursing Problem</div>
-        <div class="item4">Secondary To</div>
-        <div class="item5">Nursing Intervention</div>
-        <!--<div class="item6">Frequency</div>-->
-        <div class="item6">Special Instructions</div>
-        <div class="item7">Changes?</div>
-        <div class="item8">Evaluation</div>
-
-        <div class="item9">Communication</div>
-        <div class="item10">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox01" name="check"/>
-                    <label for="slideCheckbox01"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item11">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText1" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown01" name="snomed01">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedCommsNursing"></span>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item12">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText2" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown02" name="snomed02">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedCommsSecond"></span>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item13">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText3" class="textInput" placeholder="Text here" /><span><button class="plus addComms"></button></span>
-                <br>
-                <ul id="snomed-dropdown03" name="snomed03">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedCommsIntervention"></span>
-           <!-- End Simple Search -->
-        </div>
-        <!--<div class="item15">
-            Dropdown List
-                <section>
-                    <select id="frequencyOption01">
-                        <option default>Frequency</option>
-                        <option>Hourly</option>
-                        <option>Every two hours</option>
-                        <option>Every two hours</option>
-                        <option>Every four hours</option>
-                        <option>Every six hours</option>
-                        <option>Every eight hours</option>
-                        <option>Every ten hours</option>
-                        <option>Every twelve hours</option>
-                        <option>Every eighteen hours</option>
-                        <option>Every twenty four hours</option>
-                      </select>
-                </section><br><br>
-                <span id="selectedCommsFrequency"></span>
-            End Dropdown
-        </div>-->
-        <div class="item14">
-            <!-- Text Area -->
-                <section>
-                    <label>
-                        <textarea id="text01" rows="5" cols="20" placeholder="Your message."></textarea>
-                      </label>
-                </section>
-            <!-- End Text Area-->
-        </div>
-        <div class="item15">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox03" name="check" />
-                    <label for="slideCheckbox03"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item16">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea id="CommsEvalText" rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-
-        <div class="item17">Breathing</div>
-        <div class="item18">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox04" name="check" />
-                    <label for="slideCheckbox04"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item19">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText4" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown04" name="snomed04">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedBreathingNursing"></span>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item20">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText5" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown05" name="snomed05">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedBreathingSecond"></span>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item21">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText6" class="textInput" placeholder="Text here" /><span><button class="plus addBreathing"></button></span>
-                <br>
-                <ul id="snomed-dropdown06" name="snomed06">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedBreathingIntervention"></span>
-           <!-- End Simple Search -->
-        </div>
-        <!--<div class="item24">
-            Dropdown List
-            <section>
-                <select id="frequencyOption02">
-                    <option default>Frequency</option>
-                    <option>Hourly</option>
-                    <option>Every two hours</option>
-                    <option>Every two hours</option>
-                    <option>Every four hours</option>
-                    <option>Every six hours</option>
-                    <option>Every eight hours</option>
-                    <option>Every ten hours</option>
-                    <option>Every twelve hours</option>
-                    <option>Every eighteen hours</option>
-                    <option>Every twenty four hours</option>
-                  </select>
-            </section>
-            <span id="selectedBreathingFrequency"></span>
-            End Dropdown
-        </div>-->
-        <div class="item22">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea id="text02" rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-        <div class="item23">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox06" name="check" />
-                    <label for="slideCheckbox06"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item24">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea id="BreathingEvalText" rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-
-        <div class="item25">Nutrition &amp; Hydration</div>
-        <div class="item26">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox07" name="check" />
-                    <label for="slideCheckbox07"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item27">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText7" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown07" name="snomed07">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedNutritionNursing"></span>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item28">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText8" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown08" name="snomed08">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedNutritionSecond"></span>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item29">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText9" class="textInput" placeholder="Text here" /><span><button class="plus addNutrition"></button></span>
-                <br>
-                <ul id="snomed-dropdown09" name="snomed09">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedNutritionIntervention"></span>
-           <!-- End Simple Search -->
-        </div>
-        <!--<div class="item33">
-            Dropdown List
-            <section>
-                <select id="frequencyOption03">
-                    <option default>Frequency</option>
-                    <option>Hourly</option>
-                    <option>Every two hours</option>
-                    <option>Every two hours</option>
-                    <option>Every four hours</option>
-                    <option>Every six hours</option>
-                    <option>Every eight hours</option>
-                    <option>Every ten hours</option>
-                    <option>Every twelve hours</option>
-                    <option>Every eighteen hours</option>
-                    <option>Every twenty four hours</option>
-                  </select>
-            </section>
-            <span id="selectedNutritionFrequency"></span>
-            End Dropdown
-        </div>-->
-        <div class="item30">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea id="text03" rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-        <div class="item31">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox09" name="check" />
-                    <label for="slideCheckbox09"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item32">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea id="NutritionEvalText" rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-
-        <div class="item33">Mobility</div>
-        <div class="item34">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox10" name="check" />
-                    <label for="slideCheckbox10"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item35">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText10" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown10" name="snomed10">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedMobilityNursing"></span>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item36">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText11" class="textInput" placeholder="Text here" />
-                <br>
-                <ul id="snomed-dropdown11" name="snomed11">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedMobilitySecond"></span>
-           <!-- End Simple Search -->
-        </div>
-        <div class="item37">
-            <!-- Simple Search -->
-            <section id="search">
-                <input id="myText12" class="textInput" placeholder="Text here" /><span><button class="plus addMobility"></button></span>
-                <br>
-                <ul id="snomed-dropdown12" name="snomed12">
-                    <!-- Results JSON -->
-                </ul>
-            </section>
-            <span id="selectedMobilityIntervention"></span>
-           <!-- End Simple Search -->
-        </div>
-        <!--<div class="item42">
-            Dropdown List
-            <section>
-                <select id="frequencyOption04">
-                    <option default>Frequency</option>
-                    <option>Hourly</option>
-                    <option>Every two hours</option>
-                    <option>Every two hours</option>
-                    <option>Every four hours</option>
-                    <option>Every six hours</option>
-                    <option>Every eight hours</option>
-                    <option>Every ten hours</option>
-                    <option>Every twelve hours</option>
-                    <option>Every eighteen hours</option>
-                    <option>Every twenty four hours</option>
-                  </select>
-            </section>
-            <span id="selectedNMobilityFrequency"></span>
-            End Dropdown
-        </div>-->
-        <div class="item38">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea id="text04" rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
-        </div>
-        <div class="item39">
-            <!-- Checkbox -->
-            <section title=".slider">
-                <div class="slider">  
-                    <input type="checkbox" value="None" id="slideCheckbox12" name="check" />
-                    <label for="slideCheckbox12"></label>
-                </div>
-            </section>
-            <!-- End Checkbox -->
-        </div>
-        <div class="item40">
-            <!-- Text Area -->
-            <section>
-                <label>
-                    <textarea id="MobilityEvalText" rows="5" cols="20" placeholder="Your message."></textarea>
-                  </label>
-            </section>
-            <!-- End Text Area-->
+        <div class="sidebar">
+            &nbsp;
         </div>
     </div>
+
+    <div class="wrapper">
+        <div class="left">
+            <div class="left-content">
+                <h2>Operation Note</h2>
+
+                <table class="search">
+                    <!-- Indications Search -->
+                    <tr>
+                        <td colpan="3">
+                            <label for="myText1">Indications</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input id="myText1" class="textInput" placeholder="Text here" />
+                            <br>
+                            <ul id="snomed-dropdown01" name="snomed01">
+                                <!-- Results JSON -->
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="selectedIndications">
+
+                        </td>
+                        <td>
+                            <span class="plusIndications hidden"></span>
+                        </td>
+                    </tr>
+                    <!-- End Indications Search-->
+
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+
+                    <!-- Operating Procedure -->
+                    <tr>
+                        <td colpan="3">
+                            <label for="myText3">Operating Procedure</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input id="myText3" class="textInput" placeholder="Text here" />
+                            <br>
+                            <ul id="snomed-dropdown03" name="snomed03">
+                                <!-- Results JSON -->
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="selectedProcedure">
+
+                        </td>
+                        <td>
+                            <span class="plusProcedures hidden"></span>
+                        </td>
+                    </tr>
+
+                <!-- Attributes search -->
+                    <!-- Procedure Site -->
+                    <tr>
+                        <td colspan="3">
+                            <h4>Procedure Site</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="selectedProcedureSite"></span>
+                        </td>
+                        <td>
+                            <span style="position: relative;" class="plusProcedureSite hidden"></span>
+                        </td>
+                    </tr>
+
+                    <!-- Method -->
+                    <tr>
+                        <td colspan="3">
+                            <h4>Procedure Method</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="selectedProcedureMethod"></span>
+                        </td>
+                        <td>
+                            <span style="position: relative;" class="plusProcedureMethod hidden"></span>
+                        </td>
+                    </tr>
+
+                    <!-- Procedure Device -->
+                    <tr>
+                        <td colspan="3">
+                            <h4>Procedure Device</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="selectedProcedureDevice"></span>
+                        </td>
+                        <td>
+                            <span style="position: relative;" class="plusProcedureDevice hidden"></span>
+                        </td>
+                    </tr>
+
+                    <!-- Laterality -->
+                    <tr>
+                        <td colspan="3">
+                            <h4>Laterality</h4>
+
+                            <select id='LateralityList' class="hidden">
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <span class="selectedLaterality"></span>
+                        </td>
+                    </tr>
+
+                    <!-- Findings Search-->
+                    <tr>
+                        <td colpan="3">
+                            <label for="myText2">Findings</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input id="myText2" class="textInput" placeholder="Text here" />
+                            <br>
+                            <ul id="snomed-dropdown02" name="snomed02">
+                                <!-- Results JSON -->
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="selectedFindings">
+
+                        </td>
+                        <td>
+                            <span class="plusFindings hidden"></span>
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-content">
+                <h2>Anaesthetic</h2>
+
+                <table class="search">
+                    <!-- Operating Procedure -->
+                    <tr>
+                        <td colpan="3">
+                            <label for="myText4">Anaesthetic Type</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input id="myText4" class="textInput" placeholder="Text here" />
+                            <br>
+                            <ul id="snomed-dropdown04" name="snomed04">
+                                <!-- Results JSON -->
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="selectedAnaesthetic">
+
+                        </td>
+                    </tr>
+                    <!-- End Operating Procedure -->
+
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+
+                    <!-- Closure -->
+                    <tr>
+                        <td colspan="3">
+                            <label for="myTextArea01">Closure</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <textarea id="myTextArea01" placeholder="enter something exciting here.."></textarea>
+                        </td>
+                    </tr>
+                    <!-- End Closure -->
+
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+
+                    <!--Post Op Requirements-->
+                    <tr>
+                        <td colspan="3">
+                            <label for="myTextArea02">Post Op Requirements</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <textarea id="myTextArea02" placeholder="enter something exciting here.."></textarea>
+                        </td>
+                    </tr>
+                    <!-- End Post Op Requirements -->
+
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+
+                    <!-- Sensitve & Print -->
+                    <tr>
+                        <td colspan="2">
+                            <label>Sensitive</label>
+                            <div class="slider"> 
+                                <input type="checkbox" value="None" id="slideCheckbox03" name="check" />
+                                <label for="slideCheckbox03"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <label>Print</label>
+
+                            <div class="slider"> 
+                                <input type="checkbox" value="None" id="slideCheckbox04" name="check" />
+                                <label for="slideCheckbox04"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- End Sensitve & Print -->
+
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+
+                    <tr id="mappings">
+                        <!-- OPCS Mappings here -->
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <table>
+            <tr>
+                <td rowspan="5" style="font-size: 1.4em;">the Martian, Marvin (Mr.)</td>
+                <td>NHS Number:</td>
+                <td>00000000001</td>
+                <td>Date of Birth:</td>
+                <td>24-Jul-1948 (73y)</td>
+            </tr>
+            <tr>
+                <td>Ward:</td>
+                <td>-</td>
+                <td>Gender:</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Clincian</td>
+                <td>-</td>
+                <td>Address:</td>
+                <td>123 Streetname</td>
+            </tr>
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Mars {planet}</td>
+            </tr>
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>NE57 1EE</td>
+            </tr>
+        </table>
+    </header>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+                <div class="scroll-box">
+                <ul id="dataList"></ul>
+                </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal2">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+                <div class="scroll-box2">
+                <ul id="dataList2"></ul>
+                </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal3">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+                <div class="scroll-box3">
+                <ul id="dataList3"></ul>
+                </div>
+        </div>
+    </div>
+
+    
 
     <!-- Footer -->
     <footer>
