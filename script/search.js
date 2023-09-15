@@ -148,40 +148,6 @@ $(function () {
                 $('.plusProcedureMethod').removeClass('hidden')
                 $('.plusProcedureDevice').removeClass('hidden')
 
-                // OPCS Mapping
-                $.ajax({
-                    type: "GET",
-                    url: "http://nrdsrequesters.cymru.nhs.uk/WRDSRestfulService/NRDS/GetTable/nrds/vwSCTOPCS49MAP?nrd:SCUI=234260000",
-                    dataType: "xml",
-                    console.log(url)
-                    success: function(xml) {
-                        $(xml).find('nrds:row').each(function() {
-
-
-                            console.log ("test")
-                            //var title = $(this).find('title').text();
-                            //var link = $(this).find('link').text();
-
-                            //$('#mappings').append('<p><a href="' + link + '">' + title + '</a></p>');
-                        });
-                    },
-
-                    error: function(xhr, status, error) {
-                        console.error('Error:', status, error);
-                    }
-                
-                });
-
-
-
-
-
-
-
-
-
-
-
                 //Adding attributes ~ Procedure Site
                 $.getJSON ('https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/' + code + ".<<363704007", function(data) {
                     var ProcedureSiteText = data.expansion.contains[0].display
