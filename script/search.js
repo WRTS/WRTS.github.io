@@ -151,9 +151,9 @@ $(function () {
                 // OPCS Mapping
                 $.ajax({
                     type: "GET",
-                    url: "https://wrdsservicesuat.cymru.nhs.uk/wrdsrestfulservice/NRDS/GetTable/nrds/vwSCTOPCS49MAP?nrd:SCUI=234260000",
+                    url: "http://nrdsrequesters.cymru.nhs.uk/WRDSRestfulService/NRDS/GetTable/nrds/vwSCTOPCS49MAP?nrd:SCUI=234260000",
                     dataType: "xml",
-
+                    console.log(url)
                     success: function(xml) {
                         $(xml).find('nrds:row').each(function() {
 
