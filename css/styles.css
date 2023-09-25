@@ -96,6 +96,28 @@ h4 {
   margin-bottom: 0;
 }
 
+#LateralityList {
+  padding: 5px;
+  font-size: 0.9em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#LateralityList .name {
+  padding: 3px;
+  color: #fff;
+  background-color: #02001f;
+  border-bottom: #1f1b4e 1px solid;
+  display: block;
+  padding: 5px;
+}
+
+#LateralityList:hover {
+  color: #fff;
+  background-color: #02001f;
+}
+
 #snomed-dropdown01,
 #snomed-dropdown02,
 #snomed-dropdown03,

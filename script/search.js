@@ -208,7 +208,7 @@ $(function () {
                                 $(".selectedLaterality").empty();
                                 $("#LateralityList").empty();
                                 LateralityList.append(
-                                    $('<option disabled></option>').text("Please select an option")
+                                    $('<option disabled selected></option>').text("Please select an option")
                                 );
 
                                 $.each(data.expansion.contains, function(index, item){
