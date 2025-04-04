@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    //const endpoint = "https://termservdhew.wales.nhs.uk/fhir/"
     const endpoint = "https://r4.ontoserver.csiro.au/fhir/"
 
     $('#reason-for-encounter').parent().prepend('<i class="fas fa-search"></i>');
@@ -190,7 +189,6 @@ $(document).ready(function() {
                 $('#search-results-one').empty();
                 return;
             }
-            //let url = `${endpoint}ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/MemberOf991401000000107&includeDesignations=true&count=10&filter=${searchTerm}`;
             let url = `${endpoint}ValueSet/$expand?url=http://snomed.info/sct/83821000000107?fhir_vs=ecl/MemberOf991401000000107&includeDesignations=true&count=10&filter=${searchTerm}`;
             $.ajax({
                 url: url,
@@ -276,7 +274,6 @@ $(document).ready(function() {
                 return;
             }
 
-            //let url = `${endpoint}ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/MemberOf1382531000000102&includeDesignations=true&count=10&filter=${searchTerm}`;
             let url = `${endpoint}ValueSet/$expand?url=http://snomed.info/sct/83821000000107?fhir_vs=ecl/MemberOf1382531000000102&includeDesignations=true&count=10&filter=${searchTerm}`;
             $.ajax({
                 url: url,
@@ -361,7 +358,6 @@ $(document).ready(function() {
                 $('#search-results-three').hide();
                 return;
             }
-            //let url = `${endpoint}ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/%3C10363901000001102&includeDesignations=true&count=10&filter=${searchTerm}`;
             let url = `${endpoint}ValueSet/$expand?url=http://snomed.info/sct/83821000000107?fhir_vs=ecl/%3C10363901000001102&includeDesignations=true&count=10&filter=${searchTerm}`;
             $.ajax({
                 url: url,
@@ -416,7 +412,6 @@ $(document).ready(function() {
         var pftValue = $(this).find('.pft').text();
         let selectedCode = $(this).attr('data-code');
         let selectedText = $(this).text().trim();
-        //let url = `${endpoint}ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/${selectedCode}.10362801000001104&_format=json`;
         let url = `${endpoint}ValueSet/$expand?url=http://snomed.info/sct/83821000000107?fhir_vs=ecl/${selectedCode}.10362801000001104&_format=json`;
         $.ajax({
             url: url,
@@ -449,7 +444,6 @@ $(document).ready(function() {
                 if (matchingRows.length > 0) {
                     let ajaxRequests = matchingRows.map(function (row) {
                         return $.ajax({
-                            //url: `${endpoint}ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/${row.substance}.10362801000001104&_format=json`,
                             url: `${endpoint}ValueSet/$expand?url=http://snomed.info/sct/83821000000107?fhir_vs=ecl/${row.substance}.10362801000001104&_format=json`,
                             type: 'GET',
                             success: function (response) {
