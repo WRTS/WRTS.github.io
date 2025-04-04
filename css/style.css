@@ -1,0 +1,444 @@
+/* Custom styles for the app */
+html, body {
+    height: 100%;
+    margin: 0;  /* Reset margin */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    /*overflow: hidden;*/
+}
+
+i {
+    position: relative;
+    cursor: pointer;
+}
+
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #343a40;
+    margin: 0;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    background-color: #fff;
+    color: #495057;
+}
+
+.list-group-item {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #004E8C;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-body ul {
+    cursor: pointer;
+}
+
+.modal.fade.in .modal-dialog {
+    transform: translateY(0);
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal.fade .modal-dialog {
+    transform: translateY(-50px);
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translateY(0);
+}
+
+.modal-lg {
+    max-width: 800px;
+}
+
+.modal-sm {
+    max-width: 350px;
+}
+
+.top-banner {
+    background-color: #004E8C;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sidebar {
+    width: 250px;
+    /*background-color: #343a40;*/
+    background-color: #333333;
+    color: white;
+    height: 100vh;
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a.active {
+    background-color: #004E8C;
+}
+
+.sidebar a.disabled {
+    background-color: #484848;
+    pointer-events: none;
+}
+
+.sidebar a:hover {
+    color: #004E8C;
+    background-color: #fff;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 30px;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.icon-container {
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    justify-content: right;
+    margin-top: 0px;
+}
+
+.icon-container i {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav {
+    color: #004E8C; /* Base color */
+    cursor: pointer;
+    font-size: 1.6rem; /* Slightly larger font size for better readability */
+    padding: 5px 5px; /* Add padding for a better touch target */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: color 0.3s, background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center icons and text vertically */
+    padding: 10px
+}
+
+.nav:hover {
+    color: #ffffff; /* Change text color on hover */
+    background-color: #004E8C; /* Darker background on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    font-size: 1.7;
+}
+
+.nav:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(50, 80, 131, 0.5); /* Custom focus outline */
+}
+
+.invalid:hover {
+    cursor: not-allowed; 
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    /*background-color: #333;*/
+    background-color: #004E8C;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: -8px; /* Move the arrow above the tooltip */
+    left: 50%;
+    margin-left: -5px; /* Center the arrow horizontally */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #004E8C transparent; /* Arrow points upwards */
+}
+
+/* 
+Patient Information 
+*/
+.patient-info-container {
+    display: flex;
+    align-items: center; 
+    height: 50px;
+}
+
+#patient-info-header {
+    margin-top: 8px;
+    font-size: 1.4em;
+    color: #004E8C;
+}
+
+.patient-info {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.patient-info .warnings {
+    padding: 15px;
+    border: 2px solid #004E8C; 
+    border-radius: 10px;
+}
+
+.ward, .demographics {
+    padding: 15px;
+}
+
+h3, .warnings h3, .ward h3, .demographics h3 {
+    color: #004E8C;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+/*
+*/
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #004E8C;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+    background-color: #fafafa;
+}
+
+.form-control::placeholder {
+    color: #bbb;
+    opacity: 1;
+}
+
+#encounter-time {
+    display: block;
+    text-align: right;
+    color: #a0a0a0;
+}
+
+h4 {
+    color: #004E8C;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-wrapper {
+    position: relative;
+    /*width: 1000px;*/
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #004E8C;
+}
+
+#reason-for-encounter, #diagnosis, #medications {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*
+Search Results
+*/
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #004E8C;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    max-height: 350px;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.search-results.show {
+    display: block;
+}
+
+.search-results .result-item, .result-item-two, .result-item-three{
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-results .result-item:hover, .result-item-two:hover, .result-item-three:hover {
+    background-color: #f1f1f1;
+}
+
+.search-results .result-item:active, .result-item-two:active, .result-item-three:active {
+    background-color: #d1e7fd;
+}
+
+/*
+Selected Results
+*/
+.selected-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+    display: none;
+}
+
+.selected-result {
+    display: inline-flex;
+    align-items: center;
+    background-color: #004E8C;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.selected-result:hover {
+    background-color: #fff;
+    color: #004E8C;
+    transform: scale(1.05);
+}
+
+.selected-result .remove-result {
+    margin-left: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.selected-results .remove-result:hover {
+    color: #ff4136;
+}
+
+.selected-results:empty {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+.highlight-orange {
+    background-color: #FF8C00;
+}
+
+.highlight-red {
+    background-color: #ff4136;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer p {
+    position: relative;
+    top: 10px;
+}
+
+
+
+
+

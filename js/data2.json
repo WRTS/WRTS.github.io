@@ -1,0 +1,65 @@
+{
+    "patient_info": {
+        "person_title": "Miss",
+        "fname": "Daffy",
+        "lname": "Duck",
+        "dob": "25-April-1985",
+        "sex": "Female",
+        "patient_no": "0987654321",
+        "street_address": "Wacky Woods, Nest 42",
+        "city": "Quackville",
+        "postcode": "QK1P 2R3",
+        "county": "Featherfield",
+        "country": "Looneyland"
+    },
+    "allergens": [
+        {
+            "substance": {
+                "code": "4929811000001107",
+                "display": "Panadol Extra tablets (Haleon UK Trading Ltd) 16 tablet",
+                "system": "https://dmd.nhs.uk"
+            },
+            "manifestation": [
+                {
+                    "code": "418290006",
+                    "display": "Itching",
+                    "system": "http://snomed.info/sct"
+                },
+                {
+                    "code": "65124004",
+                    "display": "Swelling",
+                    "system": "http://snomed.info/sct"
+                },
+                {
+                    "code": "1268301006",
+                    "display": "Facial redness",
+                    "system": "http://snomed.info/sct"
+                }
+            ]
+        },
+        {
+            "substance": {
+                "code": "34043511000001103",
+                "display": "Fiasp 100units/ml solution for injection 10ml vials (Novo Nordisk Ltd) 1 vial",
+                "system": "https://dmd.nhs.uk"
+            },
+            "manifestation": [
+                {
+                    "code": "418290006",
+                    "display": "Itching",
+                    "system": "http://snomed.info/sct"
+                },
+                {
+                    "code": "65124004",
+                    "display": "Swelling",
+                    "system": "http://snomed.info/sct"
+                },
+                {
+                    "code": "1268301006",
+                    "display": "Facial redness",
+                    "system": "http://snomed.info/sct"
+                }
+            ]
+        }
+    ]    
+}

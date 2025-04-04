@@ -1,0 +1,55 @@
+{
+    "patient_info": {
+        "person_title": "Mr",
+        "fname": "Bugs",
+        "lname": "Bunny",
+        "dob": "14-January-1990",
+        "sex": "Male",
+        "patient_no": "1234567890",
+        "street_address": "Carrot Patch, Hole 23",
+        "city": "Acme Acres",
+        "postcode": "LO0N 3Y1",
+        "county": "Laughing Hills",
+        "country": "Looneyland"
+    },
+    "allergens": [
+        {
+            "substance": {
+                "code": "387517004",
+                "display": "Paracetamol",
+                "system": "http://snomed.info/sct"
+            },
+            "manifestation": [
+                {
+                    "code": "271807003",
+                    "display": "Eruption",
+                    "system": "http://snomed.info/sct"
+                },
+                {
+                    "code": "422587007",
+                    "display": "Nausea",
+                    "system": "http://snomed.info/sct"
+                }
+            ]
+        },
+        {
+            "substance":{
+                "code": "412071004",
+                "display": "Wheat",
+                "system": "http://snomed.info/sct"
+            },
+            "manifestation": [
+                {
+                    "code": "162031009",
+                    "display": "Indigestion",
+                    "system": "http://snomed.info/sct"
+                },
+                {
+                    "code": "422400008",
+                    "display": "Vomiting",
+                    "system": "http://snomed.info/sct"
+                }
+            ]
+        }
+    ]
+}

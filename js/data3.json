@@ -1,0 +1,31 @@
+{
+    "patient_info": {
+        "person_title": "Ms",
+        "fname": "Lola",
+        "lname": "Bunny",
+        "dob": "06-September-1992",
+        "sex": "Female",
+        "patient_no": "3456789012",
+        "street_address": "Bunny Burrow, Loft 12",
+        "city": "Bunnytown",
+        "postcode": "BNT 4Y7",
+        "county": "Carrot County",
+        "country": "Looneyland"
+    },
+    "allergens": [
+        {
+            "substance": {
+                "code": "716186003",
+                "display": "No known allergy",
+                "system": "http://snomed.info/sct"
+            },
+            "manifestation": [
+                {
+                    "code": "",
+                    "display": "",
+                    "system": ""
+                }
+            ]
+        }
+    ]
+}
